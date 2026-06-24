@@ -1,124 +1,499 @@
 <!DOCTYPE html>
-
 <html lang="cs">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TD-Photo</title>
 
-```
-<style>
+    <title>Reality a nemovitosti | TD-Photo</title>
 
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    body{
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-        font-family:Inter,sans-serif;
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-        min-height:100vh;
-
-        display:flex;
-
-        justify-content:center;
-
-        align-items:center;
-
-        background:#f5f5f7;
-
-        color:#111;
-
-        text-align:center;
-
-        padding:30px;
-    }
-
-    .container{
-
-        max-width:700px;
-    }
-
-    h1{
-
-        font-size:clamp(3rem,8vw,5rem);
-
-        line-height:0.95;
-
-        margin-bottom:25px;
-    }
-
-    p{
-
-        font-size:1.1rem;
-
-        color:#666;
-
-        line-height:1.8;
-
-        margin-bottom:20px;
-    }
-
-    .date{
-
-        display:inline-block;
-
-        margin:30px 0;
-
-        padding:14px 24px;
-
-        border-radius:999px;
-
-        background:#111;
-
-        color:white;
-
-        font-weight:600;
-    }
-
-</style>
-```
+    <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body>
 
-```
-<div class="container">
+    <!-- NAVBAR -->
 
-    <h1>
-        Připravujeme<br>
-        novou verzi webu
-    </h1>
+    <nav class="navbar navbar-expand-lg custom-navbar">
 
-    <p>
+        <div class="container nav-shell">
 
-        Stránka je momentálně ve výstavbě.
+            <a class="navbar-brand signature-logo" href="https://dohodiltomas.github.io/">
 
-    </p>
+    <img
+        src="T.Dohodil-removebg-preview.png"
+        alt="Tomáš Dohodil">
 
-    <div class="date">
+</a>
 
-        Spuštění: 1. 7. 2026
+            <button class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end"
+                 id="navbarNav">
+
+                <ul class="navbar-nav align-items-center gap-lg-3 gap-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://dohodiltomas.github.io/">
+                            Domů
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cenik">
+                            Ceník
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn contact-btn" href="#kontakt">
+                            Kontakt
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="real-estate-hero">
+
+        <img
+            src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/DJI_0004obnoven_2.jpg?ver=0"
+            alt="Reality">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content reveal">
+
+            <span class="hero-tag">
+                Reality a nemovitosti
+            </span>
+
+            <h1>
+                Prezentace nemovitostí
+            </h1>
+
+            <p>
+                Kvalitní fotografie, záběry z dronu a krátká videa,
+                která pomohou ukázat vaši nemovitost v tom nejlepším světle.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#cenik" class="btn hero-btn">
+                    Ceník
+                </a>
+
+                <a href="#kontakt" class="btn hero-btn-outline">
+                    Kontakt
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+  
+  <!-- CO NABÍZÍM -->
+
+<section class="services-section section-space">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <span class="section-tag">
+                Co nabízím
+            </span>
+
+            <h2 class="section-title mx-auto mt-3">
+                Kompletní prezentace nemovitostí
+            </h2>
+
+            <p class="section-text mx-auto mt-3" style="max-width:750px;">
+
+                Od klasických fotografií přes letecké záběry až po krátká videa.
+                Vše na jednom místě.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 reveal">
+
+                <div class="service-card">
+
+                    <i class="bi bi-camera-fill"></i>
+
+                    <h3>Fotografie</h3>
+
+                    <p>
+                        Fotografie interiéru i exteriéru,
+                        které pomohou nemovitost prezentovat v tom nejlepším světle.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 reveal">
+
+                <div class="service-card">
+
+                    <i class="bi bi-airplane-fill"></i>
+
+                    <h3>Dron</h3>
+
+                    <p>
+                        Letecké záběry ukážou pozemek,
+                        okolí i celkové zasazení nemovitosti.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 reveal">
+
+                <div class="service-card">
+
+                    <i class="bi bi-film"></i>
+
+                    <h3>Video</h3>
+
+                    <p>
+                        Krátká videa vhodná pro sociální sítě,
+                        inzerci i moderní prezentaci nemovitostí.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <p>
+</section>
 
-        Připravuji kompletně nový web, nové portfolio,
-        nové služby a spoustu dalších vylepšení.
 
-    </p>
+<!-- FOTO 2 -->
 
-    <p>
+<section class="showcase-section">
 
-        Je se na co těšit. 📸
+    <img
+        src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/DJI_0006.jpg?ver=0"
+        alt="Nemovitost">
 
-    </p>
+</section>
+  
+  <!-- CENÍK -->
+
+<section class="pricing-section section-space" id="cenik">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <span class="section-tag">
+                Ceník
+            </span>
+
+            <h2 class="section-title mx-auto mt-3">
+                Vyberte si rozsah prezentace
+            </h2>
+
+            <p class="section-text mx-auto mt-3" style="max-width:700px;">
+
+                Každá nemovitost je jiná,
+                proto cenu vždy stanovuji individuálně podle rozsahu zakázky.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- FOTO -->
+
+            <div class="col-lg-4 reveal">
+
+                <div class="price-card">
+
+                    <div class="price-icon">
+                        📸
+                    </div>
+
+                    <h3>
+                        Fotografie
+                    </h3>
+
+                    <p class="price-subtitle">
+                        Základní prezentace nemovitosti
+                    </p>
+
+                    <ul>
+
+                        <li>Fotografie interiéru</li>
+                        <li>Fotografie exteriéru</li>
+                        <li>Úprava fotografií</li>
+                        <li>Online předání</li>
+
+                    </ul>
+
+                    <div class="price-note">
+
+                        Cena dle rozsahu nemovitosti (od 2490CZK)
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FOTO + DRON -->
+
+            <div class="col-lg-4 reveal">
+
+                <div class="price-card featured-card">
+
+                    <div class="price-icon">
+                        📸 🚁
+                    </div>
+
+                    <h3>
+                        Fotografie + dron
+                    </h3>
+
+                    <p class="price-subtitle">
+                        Nejčastější volba
+                    </p>
+
+                    <ul>
+
+                        <li>Vše z balíčku Fotografie</li>
+                        <li>Letecké fotografie</li>
+                        <li>Zvýraznění pozemku</li>
+                        <li>Pohled na okolí</li>
+
+                    </ul>
+
+                    <div class="price-note">
+
+                        Cena dle rozsahu nemovitosti (od 3490CZK)
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- KOMPLET -->
+
+            <div class="col-lg-4 reveal">
+
+                <div class="price-card">
+
+                    <div class="price-icon">
+                        📸 🚁 🎥
+                    </div>
+
+                    <h3>
+                        Kompletní prezentace
+                    </h3>
+
+                    <p class="price-subtitle">
+                        Maximální prezentace nemovitosti
+                    </p>
+
+                    <ul>
+
+                        <li>Fotografie interiéru a exteriéru</li>
+                        <li>Fotografie z dronu</li>
+                        <li>Video z dronu</li>
+                        <li>Video z fotoaparátu</li>
+
+                    </ul>
+
+                    <div class="price-note">
+
+                        Cena dle rozsahu nemovitosti (od 4990CZK)
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOTO 3 -->
+
+<section class="showcase-section showcase-large">
+
+    <img
+        src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/DJI_0014.jpg?ver=0"
+        alt="Nemovitost">
+
+</section>
+  
+<!-- KONTAKT -->
+
+<section class="contact-section section-space" id="kontakt">
+
+    <div class="bg-blob bg-blob-7"></div>
+    <div class="bg-blob bg-blob-8"></div>
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <span class="section-tag">
+                        Kontakt
+                    </span>
+
+                    <h2 class="section-title mt-3">
+                        Máte zájem o prezentaci nemovitosti?
+                    </h2>
+
+                    <p class="section-text mt-4">
+
+                        Potřebujete fotografie, záběry z dronu nebo kompletní
+                        prezentaci nemovitosti? Ozvěte se mi a společně najdeme
+                        nejvhodnější řešení.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="contact-links">
+
+                        <a href="mailto:dohodil.tomas@gmail.com" class="contact-item">
+
+                            <i class="bi bi-envelope"></i>
+
+                            <span>
+                                dohodil.tomas@gmail.com
+                            </span>
+
+                        </a>
+
+                        <a href="tel:+420730699111" class="contact-item">
+
+                            <i class="bi bi-telephone"></i>
+
+                            <span>
+                                730 699 111
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/dohodil.tomas/"
+                            target="_blank"
+                            class="contact-item">
+
+                            <i class="bi bi-instagram"></i>
+
+                            <span>
+                                Instagram
+                            </span>
+
+                        </a>
+
+                        <a
+                            href="https://eu.zonerama.com/dohodiltomas/1524334"
+                            target="_blank"
+                            class="contact-item">
+
+                            <i class="bi bi-images"></i>
+
+                            <span>
+                                Portfolio
+                            </span>
+
+                        </a>
+<div class="contact-item">
+
+    <i class="bi bi-building"></i>
+
+    <span>
+        IČO: 29716195
+    </span>
 
 </div>
-```
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <p>
+                © 2026 TD-Photo • Tomáš Dohodil Photography
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Tvůj JS -->
+
+<script src="script.js"></script>
 
 </body>
 </html>
