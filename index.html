@@ -200,13 +200,85 @@
 
 </section>
 
+  
+
+<section class="portrait-gallery-section section-space" id="ukazky">
+
+    <div class="container gallery-container">
+
+        <div class="gallery-heading reveal">
+            <span class="section-tag">UKÁZKY PRÁCE</span>
+            <h2 class="section-title">Realitní fotografie</h2>
+            <p class="section-text">
+                Výběr několika realizovaných zakázek.
+                Každou galerii si můžete otevřít a prohlédnout.
+            </p>
+        </div>
+
+        <div class="portrait-grid">
+
+            <button class="portrait-card" data-gallery="gallery1" type="button">
+                <img src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/IMG_8378-HDR_2.jpg?ver=0">
+                <span class="portrait-glass">
+                    <span class="portrait-kicker">Penzion</span>
+                    <span class="portrait-name">Bellet</span>
+                    <span class="portrait-action">Prohlédnout galerii ↗</span>
+                </span>
+            </button>
+
+            <button class="portrait-card" data-gallery="gallery2" type="button">
+                <img src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/IMG_5017-HDR.jpg?ver=0">
+                <span class="portrait-glass">
+                    <span class="portrait-kicker">Byt</span>
+                    <span class="portrait-name">Praha - Vinohrady</span>
+                    <span class="portrait-action">Prohlédnout galerii ↗</span>
+                </span>
+            </button>
+
+            <button class="portrait-card" data-gallery="gallery3" type="button">
+                <img src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/IMG_8879-HDR.jpg?ver=0">
+                <span class="portrait-glass">
+                    <span class="portrait-kicker">Penzion</span>
+                    <span class="portrait-name">U Osičků</span>
+                    <span class="portrait-action">Prohlédnout galerii ↗</span>
+                </span>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- Galerie / lightbox -->
+<div class="glass-gallery" id="glassGallery" aria-hidden="true">
+    <div class="glass-backdrop" data-close-gallery></div>
+
+    <div class="glass-panel" role="dialog" aria-modal="true" aria-labelledby="glassTitle">
+        <div class="glass-header">
+            <h2 id="glassTitle">Galerie</h2>
+            <button class="glass-close" id="glassClose" type="button" aria-label="Zavřít galerii">×</button>
+        </div>
+
+        <div class="glass-stage" id="glassStage">
+            <button class="glass-arrow glass-prev" id="glassPrev" type="button" aria-label="Předchozí fotografie">‹</button>
+            <img id="glassImage" src="" alt="Fotografie z galerie">
+            <button class="glass-arrow glass-next" id="glassNext" type="button" aria-label="Další fotografie">›</button>
+        </div>
+
+        <div class="glass-footer">
+            <span id="glassCounter">1 / 5</span>
+            <div class="glass-progress">
+                <span id="glassProgress"></span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- FOTO 2 -->
 
 <section class="showcase-section">
 
     <img
-        src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/DJI_0006.jpg?ver=0"
+        src="https://img43.rajce.idnes.cz/d4302/19/19864/19864657_681ea3faf3f983f24a2ae4b5e2a65928/images/DJI_0006_2.jpg?ver=0"
         alt="Nemovitost">
 
 </section>
@@ -249,7 +321,7 @@
                     </div>
 
                     <h3>
-                        Fotografie
+                        HDR Fotografie
                     </h3>
 
                     <p class="price-subtitle">
@@ -260,14 +332,14 @@
 
                         <li>Fotografie interiéru</li>
                         <li>Fotografie exteriéru</li>
-                        <li>Úprava fotografií</li>
-                        <li>Online předání</li>
+                        <li> HDR Úprava fotografií</li>
+                        <li>Fotografie z dronu</li>
 
                     </ul>
 
                     <div class="price-note">
 
-                        Cena dle rozsahu nemovitosti (od 2490CZK)
+                        Cena dle rozsahu nemovitosti <br>(od 2000CZK)
 
                     </div>
 
@@ -282,29 +354,31 @@
                 <div class="price-card featured-card">
 
                     <div class="price-icon">
-                        📸 🚁
+                        🎥
                     </div>
 
                     <h3>
-                        Fotografie + dron
+                        Video
                     </h3>
 
                     <p class="price-subtitle">
-                        Nejčastější volba
+                        Videoproklídka nemovitosti
                     </p>
 
                     <ul>
 
-                        <li>Vše z balíčku Fotografie</li>
-                        <li>Letecké fotografie</li>
-                        <li>Zvýraznění pozemku</li>
-                        <li>Pohled na okolí</li>
+                        <li>Prostřih záběrů z celé nemovitosti</li>
+                        <li>Letecké záběry v ceně</li>
+                        <li>Efektivní způsob prezentace</li>
+                        <li>cca 1-2 min dle nemovitosti</li>
 
                     </ul>
 
                     <div class="price-note">
 
-                        Cena dle rozsahu nemovitosti (od 3490CZK)
+                        Cena dle rozsahu nemovitosti 
+                      <br>
+                      (od 3000 CZK)
 
                     </div>
 
@@ -327,7 +401,7 @@
                     </h3>
 
                     <p class="price-subtitle">
-                        Maximální prezentace nemovitosti
+                        Maximální prezentace nemovitosti za ZVÝHODNĚNOU cenu
                     </p>
 
                     <ul>
@@ -341,7 +415,7 @@
 
                     <div class="price-note">
 
-                        Cena dle rozsahu nemovitosti (od 4990CZK)
+                        Cena dle rozsahu nemovitosti<br> (od 4500CZK)
 
                     </div>
 
