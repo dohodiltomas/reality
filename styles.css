@@ -873,3 +873,402 @@ section {
     }
 
 }
+
+/* TŘI KATEGORIE */
+
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.portrait-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 26px;
+  background: #eee;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 18px 48px rgba(0,0,0,.09);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.portrait-card > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.portrait-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,.14);
+}
+
+.portrait-card:hover > img {
+  transform: scale(1.04);
+}
+
+/* SKLENĚNÝ POPISEK */
+
+.portrait-glass {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 17px;
+  color: #171717;
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 20px;
+  background: rgba(255,255,255,.66);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.portrait-kicker {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  opacity: .6;
+}
+
+.portrait-name {
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -.04em;
+}
+
+.portrait-action {
+  font-size: .8rem;
+  font-weight: 600;
+  opacity: .7;
+}
+
+/* FULLSCREEN GALERIE */
+
+.glass-gallery {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.glass-gallery.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.glass-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(235,237,241,.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(1100px, 100%);
+  height: min(850px, 92vh);
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 28px;
+  background: rgba(250,250,252,.82);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  box-shadow: 0 30px 90px rgba(0,0,0,.2);
+}
+
+.glass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.glass-header h2 {
+  margin: 0;
+  color: #171717;
+  font-size: 1.6rem;
+}
+
+.glass-close,
+.glass-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  border: 1px solid rgba(255,255,255,.9);
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 5px 18px rgba(0,0,0,.1);
+  cursor: pointer;
+}
+
+.glass-close {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+.glass-stage {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(220,222,226,.4);
+}
+
+.glass-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.glass-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 32px;
+  transform: translateY(-50%);
+}
+
+.glass-prev {
+  left: 15px;
+}
+
+.glass-next {
+  right: 15px;
+}
+
+.glass-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 17px;
+  color: #333;
+  font-size: .85rem;
+}
+
+.glass-progress {
+  flex: 1;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(0,0,0,.1);
+}
+
+.glass-progress span {
+  display: block;
+  width: 20%;
+  height: 100%;
+  background: #222;
+  transition: width .3s ease;
+}
+
+body.gallery-active {
+  overflow: hidden;
+}
+
+/* TABLET A MOBIL */
+
+@media (max-width: 850px) {
+  .portrait-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .portrait-grid {
+    gap: 10px;
+  }
+
+  .portrait-card {
+    border-radius: 18px;
+  }
+
+  .portrait-glass {
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .portrait-kicker {
+    font-size: .5rem;
+  }
+
+  .portrait-name {
+    font-size: 1.05rem;
+  }
+
+  .portrait-action {
+    font-size: .65rem;
+  }
+
+  .glass-gallery {
+    padding: 8px;
+  }
+
+  .glass-panel {
+    height: 94vh;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .glass-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 26px;
+  }
+
+  .glass-prev {
+    left: 8px;
+  }
+
+  .glass-next {
+    right: 8px;
+  }
+}
+
+
+/* GALERIE UKÁZKY PRÁCE — omezená šířka a odsazení */
+.portrait-gallery-section {
+    padding: 105px 0 115px;
+    background: #fff;
+}
+
+.gallery-container {
+    max-width: 1260px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.gallery-heading {
+    max-width: 760px;
+    margin: 0 0 42px;
+}
+
+.gallery-heading .section-tag {
+    margin-bottom: 22px;
+}
+
+.gallery-heading .section-title {
+    margin: 0 0 22px;
+    max-width: 760px;
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+}
+
+.gallery-heading .section-text {
+    margin: 0;
+    max-width: 620px;
+}
+
+.portrait-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+@media (max-width: 850px) {
+    .portrait-gallery-section {
+        padding: 75px 0 85px;
+    }
+
+    .gallery-container {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .portrait-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .portrait-gallery-section {
+        padding: 60px 0 70px;
+    }
+
+    .gallery-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 28px;
+    }
+
+    .gallery-heading .section-tag {
+        margin-bottom: 16px;
+    }
+
+    .gallery-heading .section-title {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+        letter-spacing: -1.2px;
+        margin-bottom: 16px;
+    }
+
+    .gallery-heading .section-text {
+        font-size: .95rem;
+        line-height: 1.7;
+    }
+
+    .portrait-grid {
+        gap: 12px;
+    }
+}
+
+
+/* Zarovnání nadpisu a úvodního textu galerie na střed */
+.portrait-gallery-section .gallery-heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portrait-gallery-section .gallery-heading .section-tag {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portrait-gallery-section .gallery-heading .section-text {
+  margin-left: auto;
+  margin-right: auto;
+}
